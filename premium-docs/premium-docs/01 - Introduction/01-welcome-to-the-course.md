@@ -1,0 +1,15 @@
+# Welcome To The Course
+
+Welcome to my Next.js From Scratch course. This is a project based course where we'll learn about all of the fundamemtals of Next.js while building a real-world project.
+
+Next.js is a React meta framework for building server-side rendered applications as well as statically generated websites. It offers powerful capabilities for building fast, efficient, and SEO-friendly websites. In this course you'll learn about all the Next.js fundamentals including React server components, file-based routing, server actions that interact with our MongoDB database using Mongoose. We'll be using Next Auth and the Google provider for authentication. We'll use a service called Cloudinary for image storage and optimazation and much more.
+
+Now I want to stress that this is a project-based course. So everything that we we do will revolve around a real-life project called PropertyPulse, which is a real estate or property rental website. Ill give you a full demo in the next video, but it will include browsing, searching and managing property listings, bookmarking and saved properties, sharing on social media. Users can authenticate with Google and create a profile with all of their listings. We're going to build an internal messaging system so that users can inquire about a specific property. We'll implment maps and geo-coding as well as a Photoswipe lightbox and gallery. Pagination and other features. I'd say this is one of the most featureful projects that I've done in a course. There's a lot to it, but we'll take it slow and I'll explain everything we do.
+
+Now I just want to mention that this is the second iteration of this course. In the first one, we used a lot of API routes for our database stuff. I decided that I wanted to utilize Next.js a bit more so we rebuilt the app to use more server-rendered components as well as actions, which are asynchronous functions that are executed on the server. So we get the most out of the features of Next.js.
+
+As far as who this course is for, I would say anyone that knows the basics of React. If you took my React Front To Back course, you know way more than you need to to be able to take this course. Even if you just took my React crash course on YouTube, that's fine as well. The only reason that I say you should know the basics or React is because I won't be explaining things like what a component is, how to pass props, create state, etc. I assume you have that knowledge and you want to move into Next.js, which I believe is the future of React. 
+
+If the whole notion of a meta framework like Next just confuses you and you don't understand why you would need to use it, all that will be cleared up as you take this course. Things will just to click and you'll be able to start creating your own server-rendered projects.
+
+So let's get into it and take a look at the project that we'll build throughout the course.
