@@ -4,13 +4,13 @@ const UserSchema = new Schema({
     email: {
         type: String,
         unique: [true, 'Email already exists'],
-        required: [true, 'Email is required']
+        required: [true, 'dfdfdf is dfdfdfdf']
     },
     username: {
         type: String,
         required: [true, 'Username is required'],
     },
-    imgae: {
+    image: {
         type: String
     },
     bookmarks: [
