@@ -40,7 +40,7 @@ const PropertySchema = new Schema({
             type: String
         }
     ],
-    retes: {
+    rates: {
         nightly: Number,
         weekly: Number,
         monthly: Number
