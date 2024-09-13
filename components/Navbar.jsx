@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import logo from '@/assests/images/logo-white.png';
-import profileDefault from '@/assests/images/profile.png';
+import logo from '@/assets/images/logo-white.png';
+import profileDefault from '@/assets/images/profile.png';
 import { FaGoogle } from 'react-icons/fa';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
@@ -187,6 +187,7 @@ const Navbar = () => {
                                                     role="menuitem"
                                                     tabIndex="-1"
                                                     id="user-menu-item-0"
+                                                    onClick={() => { setIsProfileMenueOpen(false); }}
                                                 >Your Profile</Link>
                                                 <Link
                                                     href="/properties/saved"
@@ -194,6 +195,7 @@ const Navbar = () => {
                                                     role="menuitem"
                                                     tabIndex="-1"
                                                     id="user-menu-item-2"
+                                                    onClick={() => { setIsProfileMenueOpen(false); }}
                                                 >Saved Properties</Link>
                                                 <button
                                                     className="block px-4 py-2 text-sm text-gray-700"
