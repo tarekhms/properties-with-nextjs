@@ -3,9 +3,8 @@ import connectDB from "@/config/db";
 import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
-async function updateProperty(propertyId, formData) {
+async function updateProperty(previousState, formData) {
     await connectDB();
 
     const sessionUser = await getSessionUser();
@@ -15,6 +14,7 @@ async function updateProperty(propertyId, formData) {
     }
 
     const { userId } = sessionUser;
+    const propertyId = formData.get('propertyId');
 
     const existingProperty = await Property.findById(propertyId);
 
@@ -54,7 +54,7 @@ async function updateProperty(propertyId, formData) {
 
     revalidatePath('/', 'layout');
 
-    redirect(`/properties/${updatedProperty._id}`);
+    return { submitted: true };
 }
 
 export default updateProperty;

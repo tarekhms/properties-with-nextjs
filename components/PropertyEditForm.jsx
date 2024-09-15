@@ -1,10 +1,25 @@
+'use client';
+import { useEffect } from "react";
+import { useFormState, useFormStatus } from 'react-dom';
+import { toast } from "react-toastify";
+import { redirect } from "next/navigation";
 import updateProperty from "@/app/actions/updateProperty";
 
 const PropertyEditForm = ({ property }) => {
-    const updatePropertyById = updateProperty.bind(null, property._id);
+
+    const [state, formAction] = useFormState(updateProperty, {});
+
+    useEffect(() => {
+        if (state.error) toast.error(state.error);
+        if (state.submitted) {
+            toast.success("Listing updated succcessfully");
+            redirect(`/properties/${property._id}`);
+        }
+    }, [state]);
 
     return (
-        <form action={updatePropertyById}>
+        <form action={formAction}>
+            <input type="hidden" id="propertyId" name="propertyId" defaultValue={property._id} />
             <h2 className="text-3xl text-center font-semibold mb-6">
                 Edit Property
             </h2>
