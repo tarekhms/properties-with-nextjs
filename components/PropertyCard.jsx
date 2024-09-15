@@ -12,18 +12,20 @@ const PropertyCard = ({ property }) => {
         } else if (rates.nightly) {
             return `$${rates.nightly.toLocaleString()}/night`;
         }
-    }
+    };
 
     return (
         <div className="rounded-xl shadow-md relative">
-            <Image
-                src={`${property.images[0]}`}
-                alt=""
-                className="w-full h-auto rounded-t-xl"
-                width="0"
-                height="0"
-                sizes="100vw"
-            />
+            <Link href={`/properties/${property._id}`}>
+                <Image
+                    src={`${property.images[0]}`}
+                    alt=""
+                    className="w-full h-auto rounded-t-xl"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                />
+            </Link>
             <div className="p-4">
                 <div className="text-left md:text-center lg:text-left mb-6">
                     <div className="text-gray-600">{property.type}</div>
@@ -37,24 +39,25 @@ const PropertyCard = ({ property }) => {
 
                 <div className="flex justify-center gap-4 text-gray-500 mb-4">
                     <p>
-                        <FaBed className="md:hidden lg:inline" /> {property.beds}
+                        <FaBed className="inline" /> {property.beds}
                         <span className="md:hidden lg:inline"> Beds</span>
                     </p>
                     <p>
-                        <FaBath className="md:hidden lg:inline" /> {property.baths}
+                        <FaBath className="inline" /> {property.baths}
                         <span className="md:hidden lg:inline"> Baths</span>
                     </p>
                     <p>
-                        <FaRulerCombined className="md:hidden lg:inline" />
-                        {property.square_feet} <span className="md:hidden lg:inline"> sqft</span>
+                        <FaRulerCombined className="inline" /> {property.square_feet}
+                        <span className="md:hidden lg:inline"> sqft</span>
                     </p>
                 </div>
 
                 <div
                     className="flex justify-center gap-4 text-green-900 text-sm mb-4"
                 >
-                    <p><FaMoneyBill className="md:hidden lg:inline" /> Weekly</p>
-                    <p><FaMoneyBill className="md:hidden lg:inline" /> Monthly</p>
+                    {property.rates.nightly && (<p><FaMoneyBill className="inline mr-2 mb-1" /> Nightly</p>)}
+                    {property.rates.weekly && (<p><FaMoneyBill className="inline mr-2 mb-1" /> Weekly</p>)}
+                    {property.rates.monthly && (<p><FaMoneyBill className="inline mr-2 mb-1" /> Monthly</p>)}
                 </div>
 
                 <div className="border border-gray-100 mb-5"></div>
