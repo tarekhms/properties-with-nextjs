@@ -42,7 +42,7 @@ export const authOptions = {
             // 1. Get user from database
             // const user = await User.findOne({ email: session.user.email });
             // 2. Assign user id  from the session
-            session.user.id = '66e1cc5fac6bcd0f0d2ec819';
+            session.user.id = '66e5eb8032411d52273a7599';
             // 3. Return session
             return session;
         },
