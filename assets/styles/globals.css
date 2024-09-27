@@ -18,7 +18,7 @@
     }
 
     >div>div>img {
-        @apply rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full h-full object-cover aspect-[1.5/1];
+        @apply rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full h-full object-cover aspect-[1.5];
     }
 
     >div>div>div {
