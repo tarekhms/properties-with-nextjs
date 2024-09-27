@@ -8,7 +8,7 @@ import '@/assets/styles/globals.css';
 import 'photoswipe/dist/photoswipe.css';
 
 export const metadata = {
-  title: 'Property Pulse',
+  title: 'Haven Hub',
 }
 
 const MainLayout = ({ children }) => {

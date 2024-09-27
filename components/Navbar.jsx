@@ -69,11 +69,11 @@ const Navbar = () => {
                             <Image
                                 className="h-10 w-auto"
                                 src={logo}
-                                alt="PropertyPulse"
+                                alt="HavenHub"
                             />
 
                             <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                            >PropertyPulse</span>
+                            >HavenHub</span>
                         </Link>
                         {/* <!-- Desktop Menu Hidden below md screens --> */}
                         <div className="hidden md:ml-6 md:block">
