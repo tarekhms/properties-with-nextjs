@@ -11,7 +11,6 @@ import UnreadMessageCount from './UnreadMessageCount';
 
 const Navbar = () => {
     const { data: session } = useSession();
-    console.log(session);
 
     const profileImage = session?.user?.image;
 

@@ -12,6 +12,8 @@ module.exports = {
       },
       gridTemplateColumns: {
         '70/30': '70% 28%',
+        '2-auto': 'repeat(2, auto)',
+        '2-fixed': 'repeat(2, 1fr)'
       },
     },
   },
