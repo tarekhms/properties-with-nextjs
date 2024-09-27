@@ -19,13 +19,13 @@ const FeaturedPropertyCard = ({ property }) => {
             {/* <div className="rounded-t-xl md:rounded-tr-none md:rounded-l-xl min-h-64 min-w-32" style={{ flexGrow: 1, backgroundImage: 'url(' + property.images[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 &nbsp;
             </div> */}
-            <Image style={{ flexGrow: 1 }}
+            <Image
                 src={property.images[0]}
                 alt=""
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full md:w-2/5 object-cover"
+                className="rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full md:w-2/5 object-cover aspect-[1.5/1] grow"
             />
             <div className="p-6">
                 <h3 className="text-xl font-bold">{property.name}</h3>
