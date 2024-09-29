@@ -19,15 +19,17 @@ const FeaturedPropertyCard = ({ property }) => {
             {/* <div className="rounded-t-xl md:rounded-tr-none md:rounded-l-xl min-h-64 min-w-32" style={{ flexGrow: 1, backgroundImage: 'url(' + property.images[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 &nbsp;
             </div> */}
-            <Image
-                src={property.images[0]}
-                alt=""
-                width={0}
-                height={0}
-                sizes="100vw"
-            />
+            <Link href={`/properties/${property._id}`}>
+                <Image
+                    src={property.images[0]}
+                    alt=""
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                />
+            </Link>
             <div>
-                <h3 className="text-xl font-bold">{property.name}</h3>
+                <h3 className="text-xl font-bold"><Link href={`/properties/${property._id}`}>{property.name}</Link></h3>
                 <div className="text-gray-600 mb-4">{property.type}</div>
                 <h3
                     className="absolute top-[10px] left-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right"

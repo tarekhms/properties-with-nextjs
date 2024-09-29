@@ -17,7 +17,7 @@
         @apply grid md:grid-cols-2-auto rounded-xl shadow-md relative bg-white;
     }
 
-    >div>div>img {
+    >div>div img {
         @apply rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full h-full object-cover aspect-[1.5];
     }
 
